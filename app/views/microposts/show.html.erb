@@ -1,0 +1,6 @@
+<% provide(:title,'コメント一覧') %>
+<div class="comments-index">
+  <h4>コメント一覧</h4>
+  <%= render "comments/comment.index",comments: @comments %>
+</div>
+<%= render "comments/comment_form", micropost: @micropost, comment: @comment %>

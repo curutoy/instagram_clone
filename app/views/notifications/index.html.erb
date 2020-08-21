@@ -1,0 +1,13 @@
+<% provide(:title, '通知') %>
+<div class="notification">
+  <h3 class="text-center">通知</h3>
+  <div class="notification-article">
+    <% if @notifications.exists? %> <!--@notificationが存在指定ればtrue -->
+      <div class="users-index">
+          <%= render @notifications %>
+      </div>
+    <% else %>
+      <p class="notification-none">通知はありません</p>
+    <% end %>
+  </div>
+</div>

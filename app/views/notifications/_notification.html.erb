@@ -1,0 +1,17 @@
+<% visitor = notification.visitor %>
+<% micropost = notification.micropost %>
+<div class="user-view clearfix container">
+  <div class="row">
+    <div class="user-view-left col-sm-2">
+    <%= link_to gravatar_for(notification.visitor, size: 50), notification.visitor %>
+    </div>
+    <div class="user-view-right col-sm-10">
+       <!-- notification_formをnotifications_helper.rbで定義　-->
+      <%= notification_form(notification) %>
+      <% if !@comment.nil? %>
+        <span>「</span><p class="moderate-font" style="color: #C0C0C0;"><%= @comment.text %></p><span>」</span>
+      <% end %>
+      <span class="moderate-font"><%= " (#{time_ago_in_words(notification.created_at)} 前)" %></span>
+    </div>
+  </div>
+</div>

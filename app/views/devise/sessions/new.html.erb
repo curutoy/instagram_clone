@@ -1,0 +1,27 @@
+<% provide(:title, 'ログイン') %>
+<div class="login">
+  <div class="devise-container">
+    <div class="title">
+      <h1>Toystagram</h1>
+    </div>
+    <div class="login-form">
+      <%= render "devise/sessions/login_form" %>
+    </div>
+    <p class="or">または</p>
+    <div class="facebook">
+      <% if devise_mapping.omniauthable? %>
+        <% resource_class.omniauth_providers.each do |provider| %>
+          <%= link_to  omniauth_authorize_path(resource_name, provider), :class => "btn btn-primary"  do %>
+            <i class="fab fa-facebook-square"></i>Facebookでログイン
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="sign-link">
+  <div class="devise-container">
+    <p>アカウントをお持ちではないですか？</p>
+    <%= link_to "登録する",new_user_registration_path, class: "sign_link" %>
+  </div>
+</div>

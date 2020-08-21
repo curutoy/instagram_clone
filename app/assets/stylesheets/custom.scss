@@ -1,0 +1,216 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+li{
+  list-style: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.main{
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+#error_explanation li{
+ background: linear-gradient(transparent 60%, #ffcccc 0%);
+}
+/* header */
+.navbar{
+  background-color: #FFFFFF;
+  border: solid 1px #D3D3D3;
+  height: 60px;
+  margin-bottom: 0;
+}
+
+.container-fluid{
+  display: flex;
+}
+
+.container-fluid h1{
+  margin: 0;
+}
+
+#logo{
+  color: #6B8E23;
+  float: left;
+  font-size: 30px;
+  font-family: 'Galada', cursive;
+  font-weight: bold;
+}
+
+.header-link{
+  position: relative;
+  height: 60px;
+}
+
+.header-link a{
+  height: 60px;
+}
+
+.glyphicon-camera:before{
+  display: inline-block;
+  padding-top: 5px;
+}
+
+.glyphicon-bell:before{
+  display: inline-block;
+  padding-top: 5px;
+}
+
+.fa-users:before{
+  display: inline-block;
+  padding-top: 5px; 
+}
+
+.form-group{
+  padding-top: 15px;
+}
+
+.form-group input{
+  display: inline-block;
+  border-radius: 3px;
+}
+
+#search-form{
+  float: left;
+  padding: 3px 20px 3px 20px;
+  border: solid 1px #D3D3D3;
+}
+
+.search-btn{
+  margin-left: 5px;
+  padding: 4px 8px 4px 8px;
+  color: white;
+  background-color: #6B8E23;
+  border: none;
+}
+
+.notification-circle{
+  position: absolute;
+  top: 22px;
+  left: 27px;
+  color: red;
+}
+
+.header-mypage img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.navbar-toggle{
+  float: right;
+}
+
+/* Users index */
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+/* User show */
+.row{
+  padding-bottom: 30px;
+}
+
+.user_image{
+  height: 200px;
+}
+
+.user_image a{
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  height: 100%;
+}
+
+.user_image img{
+  border-radius: 50%;
+  width: 40%;
+}
+
+.user-info-first{
+  display: flex;
+}
+
+.user-name-right ul{
+  display: flex;
+  margin-left: 30px;
+  margin-top: 25px;
+}
+
+.user-name-right a{
+  display: inline-block;
+}
+
+.profile-edit-link{
+  border: solid 1px #D3D3D3;
+  border-radius: 5px;
+  padding: 5px;
+  color: black;
+}
+
+#logout-link{
+  padding: 5px 0 0 20px;
+}
+
+.logout-icon{
+  color: black;
+}
+
+.unfollw-btn{
+  background-color: white;
+  border: solid 1px #D3D3D3;
+}
+
+.follow-btn{
+  background-color: #6B8E23;
+  color: white;
+}
+
+.stats{
+  display: flex;
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+.stats a{
+  color: black;
+  padding-left: 30px;
+}
+
+.user-user_name{
+  font-weight: bold;
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+.user-post{
+  border-top: solid 1px #D3D3D3;
+  margin: 0 20px 0 20px;
+}
+
+.microposts{
+  margin-top: 50px;
+  padding: 0;
+}
+
+.microposts li{
+  padding-bottom: 40px;
+}
+
+.user-microposts-img img{
+  width: 100%;
+}
