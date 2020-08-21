@@ -4,22 +4,21 @@
     <div class="title">
       <h1>Toystagram</h1>
     </div>
-  <p>登録して友達の写真や動画をチェックしよう</p>
-  <div class="facebook">
-    <%- if devise_mapping.omniauthable? %>
-    <%- resource_class.omniauth_providers.each do |provider| %>
-    　 <%= link_to  omniauth_authorize_path(resource_name, provider), :class => "btn btn-primary"  do %>
-         <i class="fab fa-facebook-square"></i>Facebookでログイン
+    <p>登録して友達の写真や動画をチェックしよう</p>
+    <div class="facebook">
+      <%- if devise_mapping.omniauthable? %>
+        <%- resource_class.omniauth_providers.each do |provider| %>
+      　   <%= link_to  omniauth_authorize_path(resource_name, provider), :class => "btn btn-primary"  do %>
+            <i class="fab fa-facebook-square"></i>Facebookでログイン
+          <% end %>
         <% end %>
-    <% end %>
-  <% end %>
-  </div>
-  <p class="or">または</p>
-  <%= render "devise/registrations/signup_form" %>
-  <%= link_to "利用規約","#", class: "terms" %>
+      <% end %>
+    </div>
+    <p class="or">または</p>
+    <%= render "devise/registrations/signup_form" %>
+    <%= link_to "利用規約","#", class: "terms" %>
   </div>
 </div>
-
 <div class="sign-link">
   <div class="devise-container">
     <p>アカウントをお持ちですか？</p>

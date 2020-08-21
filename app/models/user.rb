@@ -65,5 +65,4 @@ class User < ApplicationRecord
                                                               action: 'follow')
     notification.save 
   end
-
 end

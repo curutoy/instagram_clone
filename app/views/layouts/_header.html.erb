@@ -1,47 +1,46 @@
 <% if user_signed_in? %>
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid container">
-    <div class="navbar-header">
-      <%= link_to("Toystagram", root_path , class: 'navbar-brand', id: "logo") %>
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navber">
-        <span class="sr-only">ナビゲーションの切替</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div><!-- /.navbar-header -->
-      <div class="form-group  center-block hidden-xs">
-        <%= search_form_for @q do |f| %>
-          <%= f.text_field :user_name_cont, placeholder: 'ユーザー名を入力...', id: "search-form"  %>
-          <%= f.submit ("検索"), class: 'search-btn' %>
-        <% end %>
-      </div>
-    <div class="collapse navbar-collapse" id="navber">
-      <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
-         <li class="header-link nav-item">
-          <%= link_to new_micropost_path, :class => "btn btn-link btn-lg"  do %>
-           <span class="glyphicon glyphicon-camera fa-lg"></span>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid container">
+      <div class="navbar-header">
+        <%= link_to("Toystagram", root_path , class: 'navbar-brand', id: "logo") %>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navber">
+          <span class="sr-only">ナビゲーションの切替</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div><!-- /.navbar-header -->
+        <div class="form-group  center-block hidden-xs">
+          <%= search_form_for @q do |f| %>
+            <%= f.text_field :user_name_cont, placeholder: 'ユーザー名を入力...', id: "search-form"  %>
+            <%= f.submit ("検索"), class: 'search-btn' %>
           <% end %>
-        </li>
-        <li class="header-link nav-item">
-          <%= link_to notifications_path, :class => "btn btn-link btn-lg"  do %>
-            <span class="glyphicon glyphicon-bell fa-lg" data-fa-transform="shrink-8 up-6"></span>
-          <% end %>
-          <% if unchecked_notifications.any? %>
-            <i class="fa fa-circle notification-circle"></i>
-          <% end %>
-        </li>
-         <li class="header-link nav-item">
-          <%= link_to users_path, :class => "btn btn-link btn-lg"  do %>
-            <i class="fas fa-users fa-lg"></i>
-          <% end %>
-        </li>
-        <li class="header-mypage nav-item">
-          <%= link_to gravatar_for(current_user, size: 20), user_path(current_user) %>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+        </div>
+      <div class="collapse navbar-collapse" id="navber">
+        <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="header-link nav-item">
+            <%= link_to new_micropost_path, :class => "btn btn-link btn-lg"  do %>
+             <span class="glyphicon glyphicon-camera fa-lg"></span>
+            <% end %>
+          </li>
+          <li class="header-link nav-item">
+            <%= link_to notifications_path, :class => "btn btn-link btn-lg"  do %>
+              <span class="glyphicon glyphicon-bell fa-lg" data-fa-transform="shrink-8 up-6"></span>
+            <% end %>
+            <% if unchecked_notifications.any? %>
+              <i class="fa fa-circle notification-circle"></i>
+            <% end %>
+          </li>
+          <li class="header-link nav-item">
+            <%= link_to users_path, :class => "btn btn-link btn-lg"  do %>
+              <i class="fas fa-users fa-lg"></i>
+            <% end %>
+          </li>
+          <li class="header-mypage nav-item">
+            <%= link_to gravatar_for(current_user, size: 20), user_path(current_user) %>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 <% end %>
-

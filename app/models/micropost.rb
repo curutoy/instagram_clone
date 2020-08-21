@@ -73,5 +73,4 @@ class Micropost < ApplicationRecord
     end
     notification.save if notification.valid?
   end
-    
 end

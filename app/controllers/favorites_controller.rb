@@ -18,5 +18,4 @@ class FavoritesController < ApplicationController
       format.js
     end
   end
-  
 end

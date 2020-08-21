@@ -19,7 +19,6 @@ module NotificationsHelper
          tag.a(@visitor.name, href: user_path(@visitor), style:"font-weight: bold;")+"が"+tag.a('あなたの投稿', href: micropost_path(notification.micropost_id), style:"font-weight: bold;")+"にコメントしました"
     end
   end
-  
   #未確認通知
   def unchecked_notifications
     @notifications = current_user.passive_notifications.where(checked: false)
