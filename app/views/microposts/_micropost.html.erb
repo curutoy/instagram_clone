@@ -7,33 +7,33 @@
 </li>
 <!-- モーダル・ダイアログ -->
 <div id="modal-<%= micropost.id %>" class="modal fade" tabindex="-1">
-	<div class="modal-dialog" id="modal-dialog">
-		<div class="modal-content" id="modal-content">
-			<div class="modal-body" id="modal-body">
-				<div class="row" id="modal-row">
-					<div class="col-xs-12 col-sm-8" id="modal-img">
-						<%= image_tag micropost.display_image %>
-					</div>
-					<div class=" col-sm-4" id="modal-right">
-						<div class="modal-user">
-							<%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
-							<span class="user"><%= link_to micropost.user.name, micropost.user %></span>
-						</div>
-						<div class="modal-favorite">
-							<%= render "favorites/favorite", micropost: micropost %>
-						</div>
-						<div id="modal-<%= micropost.id %>" class="modal-comment">
-							<%= render "comments/comment.index", micropost: @microposts, comments: micropost.comments %>
-						</div>
-						<span class="timestamp">
-							<%= time_ago_in_words(micropost.created_at) %> 前
-							<% if micropost.user == current_user %> 
-							  <%= link_to "削除", micropost, method: :delete, data: { confirm: "本当に削除しますか？" } %>
-							<% end %>
-						</span>
-					</div>
-				</div>
+  <div class="modal-dialog" id="modal-dialog">
+  	<div class="modal-content" id="modal-content">
+	  <div class="modal-body" id="modal-body">
+	    <div class="row" id="modal-row">
+		  <div class="col-xs-12 col-sm-8" id="modal-img">
+		  	<%= image_tag micropost.display_image %>
+		  </div>
+		  <div class=" col-sm-4" id="modal-right">
+		    <div class="modal-user">
+		      <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
+			  <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
+			</div>
+			<div class="modal-favorite">
+			  <%= render "favorites/favorite", micropost: micropost %>
+		    </div>
+			<div id="modal-<%= micropost.id %>" class="modal-comment">
+			  <%= render "comments/comment.index", micropost: @microposts, comments: micropost.comments %>
+			</div>
+			<span class="timestamp">
+			  <%= time_ago_in_words(micropost.created_at) %> 前
+			  <% if micropost.user == current_user %> 
+			    <%= link_to "削除", micropost, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+			  <% end %>
+			</span>
+		  </div>
+		</div>
       </div>
-	  </div>
+	</div>
   </div>
 </div>
