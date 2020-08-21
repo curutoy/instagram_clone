@@ -1,0 +1,11 @@
+<div class="comment-form">
+  <%= form_for([micropost , comment]) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <div class="field comment-form">
+      <%= f.text_area :text, :rows => "2", placeholder: "コメントを追加..." %>
+    </div>
+    <div class="comment-submit">
+      <%= f.submit "投稿する", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

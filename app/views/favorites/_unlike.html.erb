@@ -1,0 +1,8 @@
+<div class="like-wrapper">
+  <%= form_for(micropost.favorites.find_by(user_id: current_user.id), method: :delete, remote: true) do |f| %>
+    <%= button_tag(class: "btn btn-xs like-btn") do %>
+      <span class="glyphicon glyphicon-heart" aria-hidden="true" style="font-size:30px;"></span>
+    <% end %>
+    <%= content_tag :span, "#{micropost.favorites.count}人が「いいね！」しました", class: "heart-count", id: "like-counts" %>
+  <% end %>
+</div>

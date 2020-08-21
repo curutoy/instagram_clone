@@ -1,0 +1,8 @@
+<% if comments %>
+  <% comments.each do |comment| %>
+    <p>
+      <strong><%= link_to comment.user.user_name, comment.user %></strong>
+      <%= comment.text %>
+    </p>
+  <% end %>
+<% end %>

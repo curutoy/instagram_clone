@@ -1,0 +1,163 @@
+/* Micropost-new */
+
+.micropost-new{
+  width: 350px;
+  height: 450px;
+  border: solid 1px #C0C0C0;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.micropost-new-title h3{
+  text-align: center;
+  color: #8e8e8e;
+  padding-top: 40px;
+}
+
+.micropost-new-container{
+  width: 270px;
+  margin: 0 auto;
+}
+
+.micropost-new-form{
+  padding-top: 50px;
+}
+
+.micropost-new-field{
+  padding-top: 20px;
+}
+
+.micropost-new-field textarea{
+  width: 100%;
+}
+
+.micropost-submit{
+  margin-top: 20px;
+}
+
+/*index*/
+
+.microposts-index{
+  width: 600px;
+  height: 900px;
+  border: solid 1px #C0C0C0;
+  border-radius: 3px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.microposts-user{
+  border-bottom: solid 1px #C0C0C0;
+  height: 60px;
+  line-height: 60px;
+}
+
+.microposts-user img{
+  width: 35px;
+  height: 35px;
+  margin-left: 5px;
+  border-radius: 50%;
+}
+
+.microposts-user a{
+  padding-left: 20px;
+}
+
+.microposts-img img{
+  width: 600px;
+  height: 600px;
+}
+
+.microposts-img-bottom{
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #8e8e8e;
+}
+
+.like-btn{
+  border: none;
+  color: #c53d43;
+  display: block;
+  padding-top: 5px;
+}
+
+.like-btn:hover{
+  color: #ee827c;
+  background-color: white;
+}
+
+.microposts-content{
+  padding-top: 5px;
+}
+
+.microposts-comment-link{
+  padding-top: 5px;
+}
+
+.timestamp{
+  color: #8e8e8e;
+}
+
+.comment-form textarea{
+  width: 100%;
+  color: #8e8e8e;
+  opacity: 0.8;
+}
+
+.comment-submit{
+  text-align: center;
+}
+
+/*modal */
+#modal-btn{
+  background-color: white;
+  padding: 0;
+}
+
+#modal-dialog{
+  width: 960px;
+  height: 640px;
+}
+
+#modal-content{
+  width: 960px;
+  height: 640px;
+}
+
+#modal-body{
+  padding: 0;
+}
+
+#modal-row{
+  padding-bottom: 0;
+  width: 960px;
+  margin: 0;
+}
+
+#modal-img{
+  padding: 0;
+}
+
+#modal-img img{
+  display: inline-block;
+  width: 640px;
+}
+
+#modal-right{
+  padding: 0;
+}
+
+.modal-user{
+  padding: 10px 0 10px 10px;
+  border-bottom: 1px solid #8e8e8e;
+}
+
+.modal-user img{
+  border-radius: 50%;
+}
+
+.modal-comment{
+  height: 450px;
+  overflow-wrap: break-word;
+  overflow: scroll;
+}

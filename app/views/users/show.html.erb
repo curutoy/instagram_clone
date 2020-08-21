@@ -1,0 +1,57 @@
+<% provide(:title,@user.name) %>
+<div class="row">
+  <div class="col-xs-4 user_image">
+      <%= link_to gravatar_for(@user),"#",class: "img-responsive" %>
+  </div>
+  <div class="col-xs-8 user_info">
+    <div class="user-info-first">
+      <div class="user-name">
+        <h1>
+          <%= @user.user_name %>
+        </h1>
+      </div>
+      <div class="user-name-right">
+        <% if @user.id == current_user.id %>
+          <ul>
+            <li>
+              <%= link_to "プロフィール編集", edit_user_registration_path, :class => "profile-edit-link" %>
+            </li>
+            <li>
+              <%= link_to logout_path, :class => "btn btn-link btn-lg", id: "logout-link"  do %>
+                <i class="fas fa-sign-out-alt fa-lg logout-icon"></i>
+              <% end %>
+            </li>
+          </ul>
+        <% else %>
+           <ul>
+            <%= render 'follow_form' %> 
+           </ul>
+        <% end %>
+      </div>
+    </div>
+    <div class="user-name-bottom">
+      <div class="post_follow_count">
+        <section class="stats">
+        <%= render 'shared/stats' %>
+      </section>
+      </div>
+      <p class="user-user_name">
+        <%= @user.name %>
+      </p>
+      <p>
+        <%= @user.profile %>
+      </p>
+      <p>
+        <%= @user.website %>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="row user-post">
+  <% if @microposts.any? %>
+    <ol class="microposts">
+      <%= render @microposts %>
+    </ol>
+  <% end %>
+</div>
+

@@ -1,0 +1,7 @@
+<span class="favorite" id="favorite-<%= micropost.id %>">
+  <% if micropost.like?(current_user) %>
+    <%= render 'favorites/unlike', micropost: micropost %>
+  <% else %>
+    <%= render 'favorites/like', micropost: micropost %>
+  <% end %>
+</span>
